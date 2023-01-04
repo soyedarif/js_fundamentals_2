@@ -9,6 +9,7 @@ if(hasDriversLicense) console.log('I can drive');
 const interface='Audio';
 const private=549;
 */
+/*
 function logger(){ //function keyword - function name
     console.log('My name is Arif')
 }
@@ -27,3 +28,17 @@ console.log(applejuice);
 
 const appleOrangeJuice=fruitProcessor(2,4);
 console.log(fruitProcessor(2,4));
+*/
+//function declaration
+function calcAge1(birthYear){
+    // const age=2037-birthYear;
+    return 2037-birthYear;
+}
+const age1=calcAge1(1991)//parameter value or argument.
+console.log(age1);
+//function expression
+const calcAg2=function (birthYear){ //function without name anonymous function
+    return 2037-birthYear;
+}
+const age2=calcAg2(1992);
+console.log(age2)
