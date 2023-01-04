@@ -73,3 +73,39 @@ function fruitProcessor(apples,oranges){//apples and oranges are parameters
 
 console.log(fruitProcessor(2,3))
 */
+/*
+const calcAge=function(birthYear){
+    return 2037-birthYear;
+}
+const yearsUntilRetirement = function(birthYear,firstName) {
+    const age = calcAge(birthYear);
+    const retirement = 65 - age;
+    if(retirement>0){
+        console.log(`${firstName} retires in ${retirement} years`)
+        return retirement;//with return execution is done. code after it won't work
+        console.log(`${firstName} retires in ${retirement} years`)
+    }else{
+        console.log(`${firstName} has already retired`)
+        return -1;
+    }
+    // return `${firstName} retires in ${retirement}`
+}
+console.log(yearsUntilRetirement(1969, "Jonas"));
+console.log(yearsUntilRetirement(1988, "Mike"));
+*/
+
+const calcAverage=(a,b,c)=>(a+b+c)/3;
+const avgScoreDolphine=(85,54,41);
+const avgScoreKoalas=(23,34,27);
+
+const checkWinner=function(avgDolphine,avgKoalas){
+    if(avgDolphine*2>=avgKoalas){
+        console.log(`Dolphine Wins (${avgScoreDolphine} vs ${avgScoreKoalas})`)
+    }else if(avgKoalas*2>=avgDolphine){
+        console.log(`Koalas Win (${avgScoreKoalas} vs ${avgScoreDolphine})`)
+    }else{
+        console.log('No One Wins')
+    }
+}
+
+const winner=checkWinner(avgScoreDolphine,avgScoreKoalas);
