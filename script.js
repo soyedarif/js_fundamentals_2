@@ -154,3 +154,24 @@ console.log(age1,age2,age3);
 const age=[calcAge(years[0]),calcAge(years[1]),calcAge(years[2])];
 console.log(age) //funcion can be called from inside an array
 */
+// Method- JS built in function, we can apply on array
+const friends=['Shakil', 'Akib', 'Noyon'];
+//add element
+//friends.push('Jay'); //push to add element at the end of an array
+const newLength=friends.push('Jay'); //as push is a function it can also return data
+friends.unshift('Ria') //unshift to add element at beginning of an array
+console.log(newLength)//5
+//remove element
+friends.pop(); //remove last element
+friends.pop(); //remove last element
+console.log(friends);
+console.log(friends.indexOf('Shakil'))
+
+console.log(friends.includes('Bob'))
+// .includes() works with strict equality
+friends.unshift('23');
+console.log(friends.includes(23));//false because 23 we pushed is a string not a number
+
+if(friends.includes('Ria')){
+    console.log('you have a girlfriend')
+}
