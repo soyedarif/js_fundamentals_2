@@ -93,7 +93,7 @@ const yearsUntilRetirement = function(birthYear,firstName) {
 console.log(yearsUntilRetirement(1969, "Jonas"));
 console.log(yearsUntilRetirement(1988, "Mike"));
 */
-
+/*
 const calcAverage=(a,b,c)=>(a+b+c)/3;
 const avgScoreDolphine=(85,54,41);
 const avgScoreKoalas=(23,34,27);
@@ -109,3 +109,48 @@ const checkWinner=function(avgDolphine,avgKoalas){
 }
 
 const winner=checkWinner(avgScoreDolphine,avgScoreKoalas);
+*/
+/*
+const friend1='Shakil';
+const friend2='Akib';
+const friend3='Noyon';
+
+const friends=['Shakil', 'Akib', 'Noyon']; // array is zero based
+console.log(friends)
+
+// another way
+const years1= new Array(1991,1984,2008,2020); //array works here as a function
+
+console.log(friends[0]);//Shakil
+console.log(friends[2]);
+console.log(friends.length) //length to count element in the array
+
+console.log(friends[friends.length-1]); //[]expression
+
+// replace Element in array
+friends[1]='Jubaer';
+// only primitive values are immutable but array is not primitive value. so can always change it. But we can't change the whole array.
+// friends=['Galib', 'Juhu', 'Pele']
+console.log(friends);
+
+// Arrays can also hold variable, expression, and other array inside
+const firstName='Arif';
+const arif= [firstName,'Alam', 2023-1996,'Student',friends];
+console.log(arif);
+
+//Exercise
+function calcAge(birthYear){
+    return 2037-birthYear;
+    // const age=2037-birthYear;
+}
+const years=[1990,1996,2001,2010.2014];
+//what not to do.
+//calcAge(years); 
+//what to do
+const age1=calcAge(years[0]);
+const age2=calcAge(years[1]);
+const age3=calcAge(years[2]);
+console.log(age1,age2,age3);
+const age=[calcAge(years[0]),calcAge(years[1]),calcAge(years[2])];
+console.log(age) //funcion can be called from inside an array
+*/
