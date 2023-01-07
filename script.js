@@ -206,3 +206,40 @@ const total=[calcTip1(bill[0])+bill[0],calcTip1(bill[1])+bill[1],calcTip1(bill[2
 console.log(tips);
 console.log(total);
 */
+// Objects
+const jonasArray=[
+    'Jonas',
+    'Schmedmann',
+    2023-1991,
+    'teacher',
+    ['Micheal','Peter','Steven']
+]
+//in array we can't reference each element by name but we just have access them by index order number
+const jonas={
+    firstName:'Jonas', //key or property variable name:value,
+    lastName:'Schmedmann',
+    age:2023-1991,
+    job:'Teacher',
+    friends: ['Micheal','Peter','Steven']
+}
+console.log(jonas.lastName); //.real or final property name
+console.log(jonas['lastName']) //[] for computed property name
+
+const namekey='Name';
+console.log(jonas['first'+namekey])//firstName= Jonas
+console.log(jonas['last'+namekey])//lastName= Schmedmann
+
+const interestedIn=prompt('What do you want to know about Jonas? Choose between firstname, lastname,age,job,friends');
+// console.log(jonas.interestedIn);
+if(jonas[interestedIn]){
+    console.log(jonas[interestedIn]); //input keyword job= Teacher
+
+}else{
+    console.log('Wrong keyword! Choose between firstname, lastname,age,job,friends')
+}
+jonas.location='Portugal';
+jonas['twitter']='@soyedarif';
+console.log(jonas);
+
+//Challenge
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`)
