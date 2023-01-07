@@ -155,6 +155,7 @@ const age=[calcAge(years[0]),calcAge(years[1]),calcAge(years[2])];
 console.log(age) //funcion can be called from inside an array
 */
 // Method- JS built in function, we can apply on array
+/*
 const friends=['Shakil', 'Akib', 'Noyon'];
 //add element
 //friends.push('Jay'); //push to add element at the end of an array
@@ -175,3 +176,33 @@ console.log(friends.includes(23));//false because 23 we pushed is a string not a
 if(friends.includes('Ria')){
     console.log('you have a girlfriend')
 }
+*/
+
+// basic way
+/*
+const calcTip=function(value){
+    let tip;
+    if(value>=50&&value<=300){
+        tip=(value*15)/100
+    }else{
+        tip=(value*20)/100
+    }
+    return tip;
+}
+*/
+// ternary way 
+// const calcTip1=bill=>bill>=50&&bill<=300?(bill*15)/100:(bill*20)/100;
+/*
+const tip1=calcTip1(bill[0])
+const tip2=calcTip1(bill[1])
+const tip3=calcTip1(bill[2])
+const tips=[tip1,tip2,tip3]
+*/
+/*
+const bill=[125,555,44];
+const tips=[calcTip1(bill[0]),calcTip1(bill[1]),calcTip1(bill[2])]
+// const total=[bill[0]+tip1,bill[1]+tip2,bill[2]+tip3]
+const total=[calcTip1(bill[0])+bill[0],calcTip1(bill[1])+bill[1],calcTip1(bill[2])+bill[2]];
+console.log(tips);
+console.log(total);
+*/
