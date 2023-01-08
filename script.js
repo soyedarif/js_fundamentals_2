@@ -281,3 +281,30 @@ console.log(jonas.age);
 //challange
 console.log(jonas.getSummery())
 */
+//challange
+const mark={
+    firstName:'Mark',
+    lastName:'Miller',
+    weight:78,
+    height:1.69,
+    calcBMI:function(){
+        this.bmi=this.weight/this.height**2;
+        return this.bmi;
+    },
+    
+}
+const john={
+    firstName:'John',
+    lastName:'Smith',
+    weight:92,
+    height:1.95,
+    calcBMI:function(){
+        this.bmi=this.weight/this.height**2;
+        return this.bmi;
+    },
+    
+}
+mark.calcBMI()
+john.calcBMI()
+console.log(mark.bmi, john.bmi);
+console.log(`${mark.bmi > john.bmi? `${mark.firstName}'s BMI is Higher` : `${john.firstName} has higher BMI`}`);
