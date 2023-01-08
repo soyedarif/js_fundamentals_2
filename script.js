@@ -207,6 +207,7 @@ console.log(tips);
 console.log(total);
 */
 // Objects
+/*
 const jonasArray=[
     'Jonas',
     'Schmedmann',
@@ -242,4 +243,41 @@ jonas['twitter']='@soyedarif';
 console.log(jonas);
 
 //Challenge
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`)
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`);
+*/
+/*
+const jonas={
+    firstName:'Jonas', //key or property variable name:value,
+    lastName:'Schmedmann',
+    birthYear:1991,
+    job:'Teacher',
+    friends: ['Micheal','Peter','Steven'],
+    hasDriversLicense:true,
+
+    // calcAge:function(birthYear){ //here function is a property of jonas object(method)
+    //     return 2023-birthYear;
+    // },
+    // calcAge:function(){  //to get birthYear directly from the object
+    //     //console.log(this) //jonas object
+    //     return 2023-this.birthYear;
+    // },
+    calcAge:function(){  
+        this.age=2043-this.birthYear
+        return this.age;
+    },
+    getSummery:function(){
+        return `${this.firstName} is a ${this.age} years old ${this.job}, and he ${this.hasDriversLicense ? 'has a drivers license':'has no drivers license'} `;
+    },
+};
+console.log(jonas)
+console.log(jonas.calcAge())
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+
+// console.log(jonas['calcAge'](1996));
+
+//challange
+console.log(jonas.getSummery())
+*/
