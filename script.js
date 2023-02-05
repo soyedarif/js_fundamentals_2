@@ -389,17 +389,8 @@ while(dice!==6){
     dice=Math.trunc(Math.random()*6)+1;
     if(dice===6)console.log(`Loop is about to end ${dice}`)
 } */
-/* const calcTip=function(value){
-    let tip;
-    if(value>=50&&value<=300){
-        tip=(value*15)/100
-    }else{
-        tip=(value*20)/100
-    }
-    return tip;
-} */
 //challenge 1
-const calcTip=function(bills){
+/* const calcTip=function(bills){
     let tip=0;
     let total=0
     for(let bill of bills){
@@ -412,19 +403,35 @@ const calcTip=function(bills){
         total+=cost;
     }
     return total;
-}
-
-const bills=[22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+} */
 // console.log(calcTip(bills));
+const calcTip=function(value){
+    let tip;
+    if(value>=50&&value<=300){
+        tip=(value*15)/100
+    }else{
+        tip=(value*20)/100
+    }
+    return tip;
+}
+const tips=[];
+const totals=[];
+const bills=[22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+for(let bill of bills){
+    const tip=calcTip(bill)
+    tips.push(tip);
+    totals.push(bill+tip)
+}
+console.log(tips,totals)
+
 //bonus challenge
 function calcAverage(arr){
-    let total=0;
-    let average=0;
+    let sum=0;
     for (let number of arr){
-        total+=number;
-        average=parseFloat((total/arr.length).toFixed(2));
+        sum+=number;
+        // console.log(sum,average)
     }
-    return average;
+    return parseFloat((sum/arr.length).toFixed(2));
 }
 const numbers = [45, 87, 89, 56, 32, 51, 25, 88, 41, 25, 98];
-console.log(calcAverage(numbers))
+console.log(calcAverage(arr))
