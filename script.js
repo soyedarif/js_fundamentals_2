@@ -282,6 +282,7 @@ console.log(jonas.age);
 console.log(jonas.getSummery())
 */
 //challange
+/*
 const mark={
     firstName:'Mark',
     lastName:'Miller',
@@ -308,3 +309,122 @@ mark.calcBMI()
 john.calcBMI()
 console.log(mark.bmi, john.bmi);
 console.log(`${mark.bmi > john.bmi? `${mark.firstName}'s BMI is Higher` : `${john.firstName} has higher BMI`}`);
+*/
+// loop
+//for loop starts with traditional counter variable name "i" with initial value; keep running till it meets the condition;instruction
+/*
+for(let rep=1; rep<=10;rep++){
+    console.log(`continue weight repetition ${rep} 🏋🏻‍♀️`)
+}
+*/
+/*
+const jonas=[
+    'Jonas',
+    'Schmedmann',
+    2023-1991,
+    'teacher',
+    ['Micheal','Peter','Steven'],
+    true
+];
+const types=[];
+for(let i=0;i<jonas.length;i++){//initial 0 because array index starts from 0
+    console.log(jonas[i], typeof jonas[i]); //i represents the index in jonas array.
+    // filling types array 
+    // one way 
+    // types[i]=typeof jonas[i]
+    // another way 
+    types.push(typeof jonas[i])
+};
+/*
+type[0]=jonas[0]//'jonas'
+type[0]=typeof jonas[0]//'string'
+*/
+// console.log(types)
+/*
+const years =[1991,2007,1969,2020];
+const ages=[]
+
+for(let i=0;i<years.length;i++){
+    // console.log(years[i])
+    ages.push(2038-years[i]);
+
+}
+// console.log(ages)
+//
+// continue and break 
+for(let i=0;i<years.length;i++){
+    if(typeof jonas[i]!=='string') continue;
+
+    console.log(jonas[i], typeof jonas[i])
+}
+*/
+/* const jonas=[
+    'Jonas',
+    'Schmedmann',
+    2023-1991,
+    'teacher',
+    ['Micheal','Peter','Steven'],
+];
+for(let i=jonas.length-1; i>=0;i--){
+    const element =jonas[i];
+    // console.log(element,i)
+}
+//run a loop inside a loop
+for (let exercise=1;exercise<4;exercise++){
+    console.log(`__________ starting exercise ${exercise}`);
+    for (let rep=1;rep<6;rep++){
+        console.log(`Lifting weight repetition ${rep}`)
+    }
+} */
+/* let rep=1;
+while(rep<=10){
+    console.log(rep);
+    rep++;
+} */
+
+/* let dice=Math.trunc(Math.random()*6)+1; //without +1 it will give random numbers between 0to5 but with +1 we'll get 1to6;
+// console.log(dice)
+while(dice!==6){
+    console.log(`you rolled a ${dice}`);
+    dice=Math.trunc(Math.random()*6)+1;
+    if(dice===6)console.log(`Loop is about to end ${dice}`)
+} */
+/* const calcTip=function(value){
+    let tip;
+    if(value>=50&&value<=300){
+        tip=(value*15)/100
+    }else{
+        tip=(value*20)/100
+    }
+    return tip;
+} */
+//challenge 1
+const calcTip=function(bills){
+    let tip=0;
+    let total=0
+    for(let bill of bills){
+        if(bill>=50&&bill<=300){
+            tip=(bill*15)/100;
+        }else{
+            tip=(bill*20)/100;
+        }
+        const cost = bill+tip;
+        total+=cost;
+    }
+    return total;
+}
+
+const bills=[22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// console.log(calcTip(bills));
+//bonus challenge
+function calcAverage(arr){
+    let total=0;
+    let average=0;
+    for (let number of arr){
+        total+=number;
+        average=parseFloat((total/arr.length).toFixed(2));
+    }
+    return average;
+}
+const numbers = [45, 87, 89, 56, 32, 51, 25, 88, 41, 25, 98];
+console.log(calcAverage(numbers))
